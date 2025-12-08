@@ -76,14 +76,26 @@
   <div class="container">
     <div class="nav-wrapper">
 
-      <a href="/" class="logo">
-        <img src="/images/elogo.png" alt="Erick Williams Logo">
+      <a href="index.html" class="logo">
+        <img src="images/elogo.png" alt="Erick Williams Logo">
       </a>
 
       <nav class="nav-menu">
-        <a href="index.html" class="nav-link">Portfolio</a>
+
+        <!-- PORTFOLIO DROPDOWN -->
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle">Portfolio</button>
+
+          <div class="dropdown-menu">
+            <a href="Roomy.html" class="dropdown-item">RooMy</a>
+            <a href="wan.html" class="dropdown-item">Wansom</a>
+          </div>
+        </div>
+
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
+
+        <!-- FIXED BLACK BUTTON -->
         <a href="#contact" class="btn-cta">Work With Me!</a>
       </nav>
 
@@ -96,151 +108,6 @@
     </div>
   </div>
 </header>
-
-<!-- ⭐ NAV MENU CSS -->
-<style>
-  .header {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75%;
-    max-width: 1400px;
-    z-index: 1000;
-    background: var(--color-light-gray);
-    backdrop-filter: blur(10px);
-    padding: 14px 0;
-    border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
-  }
-
-  .nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  .logo {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-  }
-
-  .logo img {
-    height: 80px;
-    width: auto;
-    object-fit: contain;
-  }
-
-  .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    margin-left: auto;
-    justify-content: flex-end;
-    flex: 0 0 auto;
-  }
-
-  .nav-link {
-    color: var(--color-dark);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 15px;
-    transition: all 0.3s;
-    background: none;
-    border: none;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 3px;
-  }
-
-  .nav-link:hover {
-    color: var(--color-gold);
-    border-bottom-color: var(--color-gold);
-  }
-
-  .nav-link.active {
-    color: var(--color-gold);
-    border-bottom-color: var(--color-gold);
-  }
-
-  .btn-cta {
-    background: var(--color-dark);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s;
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-cta:hover {
-    background: var(--color-gold);
-    transform: translateY(-2px);
-  }
-
-  .mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-  }
-
-  .mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--color-dark);
-    border-radius: 2px;
-    transition: all 0.3s;
-  }
-
-  .mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
-
-  .nav-menu.active {
-    display: flex !important;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .nav-menu {
-      display: none;
-    }
-
-    .mobile-menu-toggle {
-      display: flex;
-    }
-
-    .btn-cta {
-      display: none;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .header {
-      width: 90%;
-    }
-  }
-</style>
-
 
 
 
@@ -370,3 +237,4 @@
     <!-- End of bodyEnd -->
 </body>
 </html>
+
